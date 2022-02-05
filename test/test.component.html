@@ -1,0 +1,45 @@
+<h2> {{headerA}} </h2>
+<h1>{{appName}}</h1>
+
+<h2> {{header1}} </h2>
+<p>Solve for the following number 50 and 25:</p>
+<p>The sum {{n1}} and {{n2}} is {{n1 + n2}} </p>
+<p>The difference {{n1}} and {{n2}} is {{n1 - n2}} </p>
+<p>The quotient {{n1}} and {{n2}} is {{n1 / n2}} </p>
+<p>The product {{n1}} and {{n2}} is {{n1 * n2}} </p>
+
+<hr>
+<h2> {{header2}} </h2>
+<input type="text" [value]="clientName"> 
+
+
+<hr>
+<h2> {{header3}} </h2>
+<p [style.color]="myColor">Text color using style binding.</p>
+<p [class]="appliedCSSClass">This line Applied Style.</p>
+<p [class.red] = "notappliedCSSClass">While this line does not!:( </p>
+
+<hr>
+<h2> {{headerB}} </h2>
+<button (click)="showData($event)">Click Me!</button>
+<button on-click="showData($event)">Click Me Too!</button>
+
+<hr>
+<h1> {{TwoWay1}} </h1>
+
+<input type="text" #keyupbox placeholder="keyup box" (keyup)=getData(keyupbox.value)/>
+
+
+<input type="text" #keydownbox placeholder="keydown box" (keydown)=getData(keydownbox.value)/>
+
+
+<input type="text" #keyblurbox placeholder="keyblur box" (blur)=getData(keyblurbox.value)/>
+
+
+<input type="text" #keyinputbox placeholder="keyinput box" (input)=getData(keyinputbox.value)/>
+
+
+<h2 (mouseover)= "getData('mouse over')">Hover your mouse in this text!</h2>
+<h2 (mouseleave)= "getData('mouse left')">Hover your mouse in this text and leave!</h2>
+
+
